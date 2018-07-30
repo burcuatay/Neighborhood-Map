@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NeighborhoodMap from './NeighborhoodMap'
+import NeighborhoodMap from './NeighborhoodMap.js'
 
 class App extends React.Component {
   render() {
