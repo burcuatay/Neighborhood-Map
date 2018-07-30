@@ -6,8 +6,8 @@ class NeighborhoodMap extends Component{
 render(){
 
 return(
-<div class="container">
-      <div class="title-box">
+<div className="container">
+      <div className="title-box">
         <h1>Find must-see locations in Istanbul!</h1>
       </div>
       <div id="map">
