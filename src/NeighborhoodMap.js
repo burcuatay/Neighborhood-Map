@@ -10,8 +10,12 @@ return(
       <div className="title-box">
         <h1>Find must-see locations in Istanbul!</h1>
       </div>
-      <div id="map">
-      <Map/>
+      <div className="contents">
+        <div id="sidebar">
+        </div>
+        <div id="map">
+          <Map/>
+        </div>
       </div>
 </div>
 

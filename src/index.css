@@ -3,3 +3,20 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.contents{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#sidebar{
+  width: 20%;
+}
+
+#map{
+  width: 80%;
+}
+
+
