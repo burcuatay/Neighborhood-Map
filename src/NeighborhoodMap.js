@@ -7,7 +7,7 @@ render(){
 
 return(
 <div class="container">
-      <div class="options-box">
+      <div class="title-box">
         <h1>Find must-see locations in Istanbul!</h1>
       </div>
       <div id="map">
