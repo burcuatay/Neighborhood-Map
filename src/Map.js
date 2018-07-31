@@ -13,13 +13,17 @@ class Map extends Component {
     };
   
     render() {
-      return (
+        const markers = resortsArray.map(i=>(
+            <div className="marker" lat={i.location.lat} lng={i.location.lng}  />
+           ))
+        return (
         <div style={{ height: '100vh', width: '100%' }}>
           <GoogleMapReact
             bootstrapURLKeys={{ key: 'AIzaSyB92lneaZL30eo0_Uoglb2mMBeKBYdvRz8' }}
             defaultCenter={this.props.center}
             defaultZoom={this.props.zoom}
           >
+            {markers}
           </GoogleMapReact>
         </div>
       );
