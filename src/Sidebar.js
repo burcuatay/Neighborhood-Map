@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
-import resortsArray from './ResortsArray.js'
 
 class Sidebar extends Component {
 
     render(){
 
-        const list = resortsArray.map(i=>(
+        const list = this.props.resortList.map(i=>(
             <div className= "hotelName">{i.name}</div>))
 
         return(

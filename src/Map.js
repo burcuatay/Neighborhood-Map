@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import GoogleMapReact from 'google-map-react'
-import resortsArray from './ResortsArray.js'
 import ReactTooltip from 'react-tooltip'
 
 
@@ -14,7 +13,7 @@ class Map extends Component {
     };
   
     render() {
-        const markers = resortsArray.map(i=>(
+        const markers = this.props.resortList.map(i=>(
             <div className="marker" lat={i.location.lat} lng={i.location.lng}  />
            ))
         return (
