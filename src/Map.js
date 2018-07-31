@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import GoogleMapReact from 'google-map-react';
+import GoogleMapReact from 'google-map-react'
+import resortsArray from './ResortsArray.js'
 
 
 class Map extends Component {
