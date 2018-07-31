@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Map from './Map.js'
+import Sidebar from './Sidebar.js'
 
 class NeighborhoodMap extends Component{
 
@@ -11,8 +12,11 @@ return(
         <h1>Find must-see locations in Istanbul!</h1>
       </div>
       <div className="contents">
+
         <div id="sidebar">
+          <Sidebar/>
         </div>
+
         <div id="map">
           <Map/>
         </div>
