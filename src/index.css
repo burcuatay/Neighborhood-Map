@@ -49,6 +49,14 @@ input{
   background-color: aliceblue;
 }
 
+.visible {
+  overflow-x: visible;
+  }
+
+.hidden {
+  visibility: hidden;
+}
+
 /* Responsive Design CSS */
 
 /* Phones */

@@ -27,6 +27,7 @@ markerClick(activeResort){
 
 openResorts(){
   var open = document.getElementById("sidebar")
+  open.classList.toggle("visible")
 }
 
 closeResorts(){
@@ -42,9 +43,9 @@ return(
         <div>Find best hotels in Istanbul!</div>
       </div>
       <div className="contents">
-      <span onclick={this.openResorts()}>&#9776;</span>
+      <span onClick={()=>this.openResorts()}>&#9776;</span>
         <div id="sidebar">
-          <a href="javascript:void(0)" class="closebtn" onclick={this.closeResorts()}>&times;</a>
+          <a href="javascript:void(0)" class="closebtn" onClick={this.closeResorts()}>&times;</a>
           <input type="text" value={this.state.query} onChange={(event)=> this.filterResults(event.target.value)} />
 
           <Sidebar
