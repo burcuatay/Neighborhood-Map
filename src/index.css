@@ -13,8 +13,16 @@ body {
   margin: auto;
 }
 
+.contents span{
+  visibility: hidden
+}
+
 #sidebar{
   width: 25%;
+}
+
+#sidebar a{
+  visibility: hidden
 }
 
 #map{
@@ -44,7 +52,7 @@ input{
 /* Responsive Design CSS */
 
 /* Phones */
-@media screen and (max-width: 551px) {
+@media screen and (max-width: 617px) {
 
   .title-box{
     font-size: 1.5em;
@@ -52,11 +60,30 @@ input{
     padding-top: 10px;
   }
 
+  #sidebar{
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in */
+  }
 
+  #sidebar a{
+    visibility: visible;
+  }
+
+  .contents span{
+    visibility: visible;
+    font-size: 32px;
+  }
 }
 
 /* Tablets */
-@media screen and (min-width: 552px) and (max-width: 1100px) {
+@media screen and (min-width: 618px) and (max-width: 1100px) {
 
   .title-box{
     font-size: 2em;
