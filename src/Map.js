@@ -14,7 +14,7 @@ class Map extends Component {
   
     render() {
         const markers = this.props.resortList.map(i=>(
-            <div className="marker" data-tip={i.name} data-event='click focus' lat={i.location.lat} lng={i.location.lng}  />
+            <div className="marker" data-tip={i.name} data-event='click focus' onClick={(i)=> this.props.markerClick(i.id)} lat={i.location.lat} lng={i.location.lng}  />
            ))
 
         return (
