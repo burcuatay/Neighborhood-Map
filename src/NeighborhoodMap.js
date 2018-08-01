@@ -24,7 +24,7 @@ render(){
 return(
 <div className="container">
       <div className="title-box">
-        <h1>Find must-see locations in Istanbul!</h1>
+        <h1>Find best hotels in Istanbul!</h1>
       </div>
       <div className="contents">
 
