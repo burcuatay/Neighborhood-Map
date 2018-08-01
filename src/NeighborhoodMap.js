@@ -30,12 +30,14 @@ render(){
 return(
 <div className="container">
       <div className="title-box">
-        <h1>Find best hotels in Istanbul!</h1>
+        <div>Find best hotels in Istanbul!</div>
       </div>
       <div className="contents">
 
         <div id="sidebar">
-        <input type="text" value={this.state.query} onChange={(event)=> this.filterResults(event.target.value)} />
+
+          <input type="text" value={this.state.query} onChange={(event)=> this.filterResults(event.target.value)} />
+
           <Sidebar
           resortList={this.state.resortList}
           activeResort={this.state.activeResort}
