@@ -9,10 +9,6 @@ class Sidebar extends Component {
 
         return(
         <div className="sidebar">
-            <div className= "filter"> 
-            
-            </div>
-
 
             <div className= "resortList">
             {list}
