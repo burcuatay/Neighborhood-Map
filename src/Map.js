@@ -14,16 +14,18 @@ class Map extends Component {
   
     render() {
         const markers = this.props.resortList.map(i=>(
-            <div className="marker" lat={i.location.lat} lng={i.location.lng}  />
+            <div className="marker" data-tip={i.name} data-event='click focus' lat={i.location.lat} lng={i.location.lng}  />
            ))
+
         return (
         <div style={{ height: '100vh', width: '100%' }}>
           <GoogleMapReact
             bootstrapURLKeys={{ key: 'AIzaSyB92lneaZL30eo0_Uoglb2mMBeKBYdvRz8' }}
             defaultCenter={this.props.center}
             defaultZoom={this.props.zoom}>
-            
+
             {markers}
+            <ReactTooltip globalEventOff='click' />
           </GoogleMapReact>
         </div>
       );

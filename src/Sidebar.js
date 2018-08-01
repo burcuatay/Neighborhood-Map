@@ -10,9 +10,9 @@ class Sidebar extends Component {
         return(
         <div className="sidebar">
 
-            <div className= "resortList">
+         <div className= "resortList">
             {list}
-            </div>
+         </div>
         </div>
         )
     }

@@ -3,6 +3,7 @@ import Map from './Map.js'
 import Sidebar from './Sidebar.js'
 import resortsArray from './ResortsArray.js'
 
+
 class NeighborhoodMap extends Component{
 
 state = {
