@@ -30,10 +30,6 @@ openResorts(){
   open.classList.toggle("visible")
 }
 
-closeResorts(){
-  var close = document.getElementById("sidebar")
-}
-
 
 render(){
 
@@ -43,9 +39,8 @@ return(
         <div>Find best hotels in Istanbul!</div>
       </div>
       <div className="contents">
-      <span onClick={()=>this.openResorts()}>&#9776;</span>
         <div id="sidebar">
-          <a href="javascript:void(0)" class="closebtn" onClick={this.closeResorts()}>&times;</a>
+          <a href="#" class="closebtn" onClick={()=>this.openResorts()}>&#9776;</a>
           <input type="text" value={this.state.query} onChange={(event)=> this.filterResults(event.target.value)} />
 
           <Sidebar

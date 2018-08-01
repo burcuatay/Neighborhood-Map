@@ -57,10 +57,6 @@ input{
   .visible {
     visibility: visible !important;
     }
-  
-  .hidden {
-    visibility: hidden !important;
-  }
 
   .title-box{
     font-size: 1.5em;
@@ -83,12 +79,9 @@ input{
 
   #sidebar a{
     visibility: visible;
-  }
-
-  .contents span{
-    visibility: visible;
     font-size: 32px;
   }
+
 }
 
 /* Tablets */
