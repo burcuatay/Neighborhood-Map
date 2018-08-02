@@ -7,14 +7,25 @@ const Map = withScriptjs(withGoogleMap((props) => {
     const markers = props.resortList.map(i=>{
 
         const { lat, lng } = i.location;
+        const google = window.google;
         return (
-            <Marker position={{ lat, lng}} /> 
+            <Marker 
+            position={{lat, lng}} 
+            onClick={() => props.markerClick(i.id)} 
+            animation={ props.activeResort === i.id  && window.google.maps.Animation.DROP}> 
+                
+                 { props.activeResort === i.id && 
+                    <InfoWindow>
+                        <div>{i.name}</div>
+                        
+                    </InfoWindow> }
+            </Marker> 
         )
     })
     return (
         <GoogleMap
         defaultZoom={11}
-        defaultCenter={{ lat: 41.031168, lng: 28.988878 }}
+        defaultCenter={{lat: 41.031168, lng: 28.988878 }}
       >
       {markers}
       </GoogleMap>
