@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
+import { InfoWindow } from "react-google-maps"
+
 
 const Map = withScriptjs(withGoogleMap((props) => {
     const markers = props.resortList.map(i=>{
 
         const { lat, lng } = i.location;
         return (
-            <Marker position={{ lat, lng}} />
+            <Marker position={{ lat, lng}} /> 
         )
     })
     return (
