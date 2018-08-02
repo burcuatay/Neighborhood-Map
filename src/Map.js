@@ -1,35 +1,24 @@
 import React, { Component } from 'react'
-import GoogleMapReact from 'google-map-react'
-import ReactTooltip from 'react-tooltip'
+import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
 
+const Map = withScriptjs(withGoogleMap((props) => {
+    const markers = props.resortList.map(i=>{
 
-class Map extends Component {
-    static defaultProps = {
-      center: {
-        lat: 41.00,
-        lng: 28.97
-      },
-      zoom: 12
-    };
-  
-    render() {
-        const markers = this.props.resortList.map(i=>(
-            <div className="marker" data-tip={i.name} data-event='click focus' lat={i.location.lat} lng={i.location.lng}  />
-           ))
-
+        const { lat, lng } = i.location;
         return (
-        <div style={{ height: '100vh', width: '100%' }}>
-          <GoogleMapReact
-            bootstrapURLKeys={{ key: 'AIzaSyB92lneaZL30eo0_Uoglb2mMBeKBYdvRz8' }}
-            defaultCenter={this.props.center}
-            defaultZoom={this.props.zoom}>
+            <Marker position={{ lat, lng}} />
+        )
+    })
+    return (
+        <GoogleMap
+        defaultZoom={8}
+        defaultCenter={{ lat: -34.397, lng: 150.644 }}
+      >
+      {markers}
+      </GoogleMap>
+    )
+}))
 
-            {markers}
-            <ReactTooltip afterShow={()=>this.props.markerClick(this.props.activeResort)} globalEventOff='click' />
-          </GoogleMapReact>
-        </div>
-      );
-    }
-  }
+
   
   export default Map;
