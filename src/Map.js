@@ -11,13 +11,17 @@ const Map = withScriptjs(withGoogleMap((props) => {
         return (
             <Marker 
             position={{lat, lng}} 
-            onClick={() => props.markerClick(i.id)} 
+            onClick={() => {props.markerClick(i.id)}} 
             animation={ props.activeResort === i.id  && window.google.maps.Animation.DROP}> 
                 
                  { props.activeResort === i.id && 
                     <InfoWindow>
-                        <div>{i.name}</div>
-                        
+                        <div>
+                            {i.name}
+                            { (props.imgUrl !== '' && props.activeResort === i.id ) ? 
+                                <img src={props.imgUrl}/> : null 
+                            }
+                        </div>
                     </InfoWindow> }
             </Marker> 
         )
