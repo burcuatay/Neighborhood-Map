@@ -19,6 +19,10 @@ body {
 
 #sidebar{
   width: 25%;
+  overflow-y: scroll;
+  min-width: 200px;
+  max-height: 400px;
+  margin-bottom: 200px;
 }
 
 #sidebar a{
