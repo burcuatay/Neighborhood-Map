@@ -473,42 +473,6 @@ const resortsArray = [
               "hasPerk": false
             },
             {
-              "id": "52b61f2e498eeda02eba3883",
-              "name": "Fevziye ana resort spa Grand",
-              "location": {
-                "lat": 41.03549690443442,
-                "lng": 28.90163548440232,
-                "labeledLatLngs": [
-                  {
-                    "label": "display",
-                    "lat": 41.03549690443442,
-                    "lng": 28.90163548440232
-                  }
-                ],
-                "distance": 6970,
-                "cc": "TR",
-                "country": "Turkey",
-                "formattedAddress": [
-                  "Turkey"
-                ]
-              },
-              "categories": [
-                {
-                  "id": "4bf58dd8d48988d15b941735",
-                  "name": "Farm",
-                  "pluralName": "Farms",
-                  "shortName": "Farm",
-                  "icon": {
-                    "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/farm_",
-                    "suffix": ".png"
-                  },
-                  "primary": true
-                }
-              ],
-              "referralId": "v-1532960776",
-              "hasPerk": false
-            },
-            {
               "id": "4fd4e9fae4b0296d1f18f828",
               "name": "Buket Resort Spa & Beach Casino Park",
               "location": {
