@@ -14,7 +14,7 @@ The project is divided into two interconnected components: `Sidebar` and `Map`. 
 
 The project shows a Map (`Map`) that is created using the [Google Maps API](https://cloud.google.com/maps-platform/) and a list of Hotels on the left hand side (`Sidebar`). The hotels shown are also shown with `markers` on the map. When a user selects a hotel from the Sidebar or a marker on the Map, an `InfoWindow` of the hotel appears on the Map. The InfoWindow includes the name of the hotel and a photo taken using the [Foursquare API](https://developer.foursquare.com/).
 
-The project uses [react-google-maps] (https://github.com/tomchentw/react-google-maps) which is a Google Map library that uses react, which has features such as Markers and InfoWindows that are used in this project.
+The project uses [react-google-maps] (https://github.com/tomchentw/react-google-maps/) which is a Google Map library that uses react, which has features such as Markers and InfoWindows that are used in this project.
 
 
 
