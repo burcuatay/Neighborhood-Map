@@ -5,9 +5,9 @@ This project is one of the requirements of certification for Udacity's *Front En
 The purpose of the application is to write an accesible and offline-first single page map application using React, Google Maps API and a third party API. For the purposes of this project, the third party API used is the Foursquare API.
 
 ## Installation
-This project has been built using a [create-react-app](https://github.com/facebook/create-react-app), which comes with its built-in service worker.
+This project has been built using a [create-react-app](https://github.com/facebook/create-react-app).
 
-Once you have downloaded the project, open terminal and cd to the folder. Then run `npm install` and then `npm start`. 
+Once you have downloaded the project, open terminal and cd to the folder. Then run `npm install` to install all the dependencies and then `npm start` to start the server. You can find the project on `http://localhost:3000`.
 
 ## Features of the App
 The project is divided into two interconnected components: `Sidebar` and `Map`. It uses state changes on the parent component `NeighborhoodMap` for connection so that both components can run intuitively.
