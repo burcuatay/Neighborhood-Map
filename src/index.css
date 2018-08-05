@@ -34,16 +34,6 @@ body {
   height: 600px;
 }
 
-.marker {
-  background-image: url(./img/marker.svg);
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  left: 5px;
-  top: 5px;
-  padding: 1px;
-}
-
 .hotelName {
   text-align: left;
   padding-left: 10px;
