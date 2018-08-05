@@ -38,6 +38,7 @@ markerClick(activeResort){
        this.setState({imgUrl})
      } 
      })
+     .catch( error=> alert(error) )
   });
   console.log(activeResort)
 }
@@ -77,6 +78,7 @@ return(
           containerElement={<div style={{ height: '400px' }} />}
           mapElement={<div style={{ height: `100%` }} />}
           imgUrl={this.state.imgUrl}
+          alt={this.state.activeResort}
           />
         </div>
       </div>

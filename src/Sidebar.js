@@ -16,12 +16,12 @@ class Sidebar extends Component {
          ))
 
         return(
-        <div className="sidebar">
+        <aside className="sidebar">
 
-         <div className= "resortList">
+         <ul className= "resortList">
             {list}
-         </div>
-        </div>
+         </ul>
+        </aside>
         )
     }
 
