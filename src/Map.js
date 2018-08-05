@@ -16,7 +16,7 @@ const Map = withScriptjs(withGoogleMap((props) => {
                 
                  { props.activeResort === i.id && 
                     <InfoWindow>
-                        <div>
+                        <div role="tooltip">
                             {i.name}
                             { (props.imgUrl !== '' && props.activeResort === i.id ) ? 
                                 <img src={props.imgUrl} alt={i.name}/> : null 

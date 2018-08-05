@@ -57,7 +57,7 @@ return(
         <div role="title" aria-label="Find best hotels in Istanbul!">Find best hotels in Istanbul!</div>
       </div>
       <div className="contents">
-        <div id="sidebar">
+        <div id="sidebar" role="list">
           <a href="#" className="closebtn" onClick={()=>this.openResorts()}>&#9776;</a>
           <input type="text" value={this.state.query} onChange={(event)=> this.filterResults(event.target.value)} />
 
