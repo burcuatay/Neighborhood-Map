@@ -19,7 +19,7 @@ const Map = withScriptjs(withGoogleMap((props) => {
                         <div>
                             {i.name}
                             { (props.imgUrl !== '' && props.activeResort === i.id ) ? 
-                                <img src={props.imgUrl}/> : null 
+                                <img src={props.imgUrl} alt={i.name}/> : null 
                             }
                         </div>
                     </InfoWindow> }

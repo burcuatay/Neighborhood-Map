@@ -78,7 +78,6 @@ return(
           containerElement={<div style={{ height: '400px' }} />}
           mapElement={<div style={{ height: `100%` }} />}
           imgUrl={this.state.imgUrl}
-          alt={this.state.activeResort}
           />
         </div>
       </div>
