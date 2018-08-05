@@ -18,9 +18,11 @@ const Map = withScriptjs(withGoogleMap((props) => {
                     <InfoWindow>
                         <div role="tooltip">
                             {i.name}
+                            <p>
                             { (props.imgUrl !== '' && props.activeResort === i.id ) ? 
                                 <img src={props.imgUrl} alt={i.name}/> : null 
                             }
+                            </p>
                         </div>
                     </InfoWindow> }
             </Marker> 
