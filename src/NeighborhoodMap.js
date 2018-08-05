@@ -38,7 +38,7 @@ markerClick(activeResort){
        this.setState({imgUrl})
      } 
      })
-     .catch( error=> alert(error) )
+     .catch( error=> alert(error.message) )
   });
   console.log(activeResort)
 }
