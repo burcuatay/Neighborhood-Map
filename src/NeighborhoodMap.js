@@ -54,7 +54,7 @@ render(){
 return(
 <div className="container">
       <div className="title-box">
-        <div>Find best hotels in Istanbul!</div>
+        <div role="title" aria-label="Find best hotels in Istanbul!">Find best hotels in Istanbul!</div>
       </div>
       <div className="contents">
         <div id="sidebar">

@@ -6,7 +6,7 @@ class Sidebar extends Component {
 
         const list = this.props.resortList.map(i=>(
             <div className= "hotelName" 
-                tabindex="0" key={i.id} 
+                tabIndex="0" key={i.id} 
                 onClick={()=> this.props.markerClick(i.id)} 
                 onKeyPress={()=> this.props.markerClick(i.id)}
                 role="button"
