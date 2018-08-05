@@ -7,7 +7,11 @@ The purpose of the application is to write an accesible and offline-first single
 ## Installation
 This project has been built using a [create-react-app](https://github.com/facebook/create-react-app).
 
+### Development Mode
 Once you have downloaded the project, open terminal and cd to the folder. Then run `npm install` to install all the dependencies and then `npm start` to start the server. You can find the project on `http://localhost:3000`.
+
+### Production Build
+To open the app in the production build, open terminal and cd to the folder. Then run `npm run build` and `serve -s build`. You can find the project on `http://localhost:5000`.
 
 ## Features of the App
 The project is divided into two interconnected components: `Sidebar` and `Map`. It uses state changes on the parent component `NeighborhoodMap` for connection so that both components can run intuitively.
