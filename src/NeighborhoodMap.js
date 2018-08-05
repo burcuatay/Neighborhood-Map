@@ -67,7 +67,7 @@ return(
           />
         </div>
 
-        <div id="map">
+        <div id="map"role="application">
           <Map
           resortList={this.state.resortList}
           activeResort={this.state.activeResort}
