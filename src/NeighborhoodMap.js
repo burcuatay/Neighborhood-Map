@@ -23,10 +23,14 @@ filterResults(query){
 
 markerClick(activeResort){
   this.setState({activeResort},()=>{
-     return fetch(`https://api.foursquare.com/v2/venues/${activeResort}/photos?client_id=YZ5RCASU5XEBZ5VSKKLDPWOR2IJXOKXQFWCJSZJYEHOSH3BO&client_secret=4IV5BS3NHMMEFNHW2IIOOKQGSEQNTAOO2BUETW42UK1VBZFZ&v=20180803`)
+   const clientId = 'YZ5RCASU5XEBZ5VSKKLDPWOR2IJXOKXQFWCJSZJYEHOSH3BO';
+   const clientSecret = '4IV5BS3NHMMEFNHW2IIOOKQGSEQNTAOO2BUETW42UK1VBZFZ';
+     return fetch(`https://api.foursquare.com/v2/venues/${activeResort}/photos?client_id=${clientId}&client_secret=${clientSecret}&v=20180803`)
      .then(response => response.json())
      .then(res => {
-       console.log(res)
+      if (res.meta && res.meta.errorType) {
+        throw Error(res.meta.errorDetail)
+      }
        const { response } = res;
        if (
          response.photos &&
@@ -38,7 +42,7 @@ markerClick(activeResort){
        this.setState({imgUrl})
      } 
      })
-     .catch( error=> alert(error.message) )
+     .catch( error=> alert(error) )
   });
   console.log(activeResort)
 }

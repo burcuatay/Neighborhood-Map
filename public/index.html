@@ -9,6 +9,11 @@
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
 
     <title>Tourist Destinations</title>
+    <script>
+      window.gm_authFailure = function() {
+         alert('Google Maps could not load!');
+      }
+      </script>
   </head>
   <body>
     <div id="root"></div>
