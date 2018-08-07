@@ -58,12 +58,12 @@ render(){
 return(
 <div className="container">
       <div className="title-box">
-        <div role="title" aria-label="Find best hotels in Istanbul!">Find best hotels in Istanbul!</div>
+        <div role="heading">Find best hotels in Istanbul!</div>
       </div>
       <div className="contents">
-        <div id="sidebar" role="list">
+        <div id="sidebar">
           <a href="#" className="closebtn" onClick={()=>this.openResorts()}>&#9776;</a>
-          <input type="text" value={this.state.query} onChange={(event)=> this.filterResults(event.target.value)} />
+          <input type="text" role="textbox" value={this.state.query} onChange={(event)=> this.filterResults(event.target.value)} />
 
           <Sidebar
           resortList={this.state.resortList}
