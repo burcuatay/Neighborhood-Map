@@ -12,11 +12,17 @@ state = {
   query: '',
   activeResort: null,
   imgUrl: '',
+  mapError: false
+}
+
+componentDidCatch(error, info){
+  console.log(error, 'errors')
+  this.setState({mapError: true})
+
 }
 
 filterResults(query){
   this.setState({query});
-  const { resortList } = this.state
   const filteredResults = resortsArray.filter(i=> i.name.includes(query));
   this.setState({resortList: filteredResults})
 }
@@ -63,7 +69,8 @@ return(
       <div className="contents">
         <div id="sidebar">
           <a href="#" className="closebtn" onClick={()=>this.openResorts()}>&#9776;</a>
-          <input type="text" role="textbox" value={this.state.query} onChange={(event)=> this.filterResults(event.target.value)} />
+          <label htmlFor="hotelname">Hotel name:</label>
+          <input id="hotelname" type="text" role="textbox" value={this.state.query} onChange={(event)=> this.filterResults(event.target.value)} />
 
           <Sidebar
           resortList={this.state.resortList}
@@ -73,16 +80,18 @@ return(
         </div>
 
         <div id="map"role="application">
-          <Map
-          resortList={this.state.resortList}
-          activeResort={this.state.activeResort}
-          markerClick = {this.markerClick.bind(this)}
-          googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyB92lneaZL30eo0_Uoglb2mMBeKBYdvRz8"
-          loadingElement={<div style={{ height: '100%' }} />}
-          containerElement={<div style={{ height: '400px' }} />}
-          mapElement={<div style={{ height: `100%` }} />}
-          imgUrl={this.state.imgUrl}
-          />
+  {
+    !this.state.mapError ? <Map
+    resortList={this.state.resortList}
+    activeResort={this.state.activeResort}
+    markerClick = {this.markerClick.bind(this)}
+    googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyB92lneaZL30eo0_Uoglb2mMBeKBYdvRz8"
+    loadingElement={<div style={{ height: '100%' }} />}
+    containerElement={<div style={{ height: '400px' }} />}
+    mapElement={<div style={{ height: `100%` }} />}
+    imgUrl={this.state.imgUrl}
+    />: <div>Map could not be found, please check the initialization method of Google Maps API</div>
+  }
         </div>
       </div>
 </div>
